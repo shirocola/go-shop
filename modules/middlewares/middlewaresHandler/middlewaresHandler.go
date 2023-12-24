@@ -1,8 +1,11 @@
 package middlewaresHandler
 
 import (
+	"os"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
+	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/shirocola/go-shop/config"
 	"github.com/shirocola/go-shop/modules/entities"
 	"github.com/shirocola/go-shop/modules/middlewares/middlewaresUsecase"
@@ -17,6 +20,7 @@ const (
 type IMiddlewaresHandler interface {
 	Cors() fiber.Handler
 	RouterCheck() fiber.Handler
+	Logger() fiber.Handler
 }
 
 type middlewaresHandler struct {
@@ -50,4 +54,13 @@ func (h *middlewaresHandler) RouterCheck() fiber.Handler {
 			"router not found",
 		).Res()
 	}
+}
+
+func (h *middlewaresHandler) Logger() fiber.Handler {
+	return logger.New(logger.Config{
+		Format:     "${time} [${ip}] ${status} - ${method} ${path}\n}",
+		TimeFormat: "02/01/2006",
+		TimeZone:   "Bangkok/Asia",
+		Output:     os.Stdout,
+	})
 }

@@ -1,2 +1,6 @@
 {"time":"2023-12-24 22:14:23","ip":"127.0.0.1","method":"GET","status_code":200,"path":"/v1","query":null,"body":null,"response":{"name":"go-shop","Version":"v0.1.0"}}
 {"time":"2023-12-24 22:14:28","ip":"127.0.0.1","method":"GET","status_code":200,"path":"/v1","query":null,"body":null,"response":{"name":"go-shop","Version":"v0.1.0"}}
+{"time":"2023-12-24 22:24:44","ip":"127.0.0.1","method":"GET","status_code":200,"path":"/v1","query":null,"body":null,"response":{"name":"go-shop","Version":"v0.1.0"}}
+{"time":"2023-12-24 22:24:51","ip":"127.0.0.1","method":"GET","status_code":200,"path":"/v1/s","query":null,"body":null,"response":{"traceId":"router-001","message":"router not found"}}
+{"time":"2023-12-24 22:37:16","ip":"127.0.0.1","method":"GET","status_code":200,"path":"/v1/s","query":null,"body":null,"response":{"traceId":"router-001","message":"router not found"}}
+{"time":"2023-12-24 22:37:23","ip":"127.0.0.1","method":"GET","status_code":200,"path":"/v1","query":null,"body":null,"response":{"name":"go-shop","Version":"v0.1.0"}}
