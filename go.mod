@@ -34,7 +34,6 @@ require (
 require (
 	github.com/Rayato159/kawaii-shop-tutorial v0.0.0-20230610161110-44524d1fbd82
 	github.com/andybalholm/brotli v1.0.5 // indirect
-	github.com/gofiber/fiber v1.14.6
 	github.com/gofiber/fiber/v2 v2.50.0 // indirect
 	github.com/google/uuid v1.3.1 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
