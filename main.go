@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/Rayato159/kawaii-shop-tutorial/config"
-	"github.com/Rayato159/kawaii-shop-tutorial/servers"
+	"github.com/shirocola/go-shop/config"
+	"github.com/shirocola/go-shop/modules/servers"
 	"github.com/shirocola/go-shop/pkg/databases"
 )
 
@@ -23,4 +23,5 @@ func main() {
 	defer db.Close()
 
 	servers.NewServer(cfg, db).Start()
+
 }

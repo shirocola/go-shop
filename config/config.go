@@ -135,7 +135,7 @@ func (c *config) App() IAppConfig {
 }
 
 func (a *app) Url() string {
-	return fmt.Sprintf("%s:%d,", a.host, a.port)
+	return fmt.Sprintf("%s:%d", a.host, a.port)
 }
 
 func (a *app) Name() string {

@@ -3,6 +3,7 @@ package monitorHandlers
 import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/shirocola/go-shop/config"
+	"github.com/shirocola/go-shop/modules/entities"
 	"github.com/shirocola/go-shop/modules/monitor"
 )
 
@@ -25,5 +26,5 @@ func (h *monitorHandler) HealthCheck(c *fiber.Ctx) error {
 		Name:    h.cfg.App().Name(),
 		Version: h.cfg.App().Version(),
 	}
-	return c.Status(fiber.StatusOK).JSON(res)
+	return entities.NewResponse(c).Success(fiber.StatusOK, res).Res()
 }
